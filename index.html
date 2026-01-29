@@ -299,14 +299,22 @@
         let isFlipped = false;
         let isShuffled = false;
 
+        // Detect base path for both local and GitHub Pages
+        function getBasePath() {
+            const pathParts = window.location.pathname.split('/').filter(p => p);
+            // Check if we're in the NHBC_Rooted_OldTestamentIcons directory
+            if (pathParts.includes('NHBC_Rooted_OldTestamentIcons')) {
+                return window.location.pathname.substring(0, window.location.pathname.indexOf('NHBC_Rooted_OldTestamentIcons') + 'NHBC_Rooted_OldTestamentIcons'.length) + '/';
+            }
+            return '/';
+        }
+
         // Load flashcards from JSON
         async function loadFlashcards() {
             try {
-                // Get the correct path for both local and GitHub Pages
-                const basePath = window.location.pathname.includes('NHBC_Rooted_OldTestamentIcons') 
-                    ? '/NHBC_Rooted_OldTestamentIcons/' 
-                    : '/';
+                const basePath = getBasePath();
                 const response = await fetch(basePath + 'flashcards.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 flashcards = data.flashcards;
                 displayCard();
@@ -323,9 +331,7 @@
             const imageElement = document.getElementById('cardImage');
             
             // Get the correct path for both local and GitHub Pages
-            const basePath = window.location.pathname.includes('NHBC_Rooted_OldTestamentIcons') 
-                ? '/NHBC_Rooted_OldTestamentIcons/' 
-                : '/';
+            const basePath = getBasePath();
             imageElement.src = basePath + 'images/' + card.image;
             imageElement.alt = card.back[0];
 
