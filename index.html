@@ -299,28 +299,18 @@
         let isFlipped = false;
         let isShuffled = false;
 
-        // Detect base path for both local and GitHub Pages
-        function getBasePath() {
-            const pathParts = window.location.pathname.split('/').filter(p => p);
-            // Check if we're in the NHBC_Rooted_OldTestamentIcons directory
-            if (pathParts.includes('NHBC_Rooted_OldTestamentIcons')) {
-                return window.location.pathname.substring(0, window.location.pathname.indexOf('NHBC_Rooted_OldTestamentIcons') + 'NHBC_Rooted_OldTestamentIcons'.length) + '/';
-            }
-            return '/';
-        }
-
         // Load flashcards from JSON
         async function loadFlashcards() {
             try {
-                const basePath = getBasePath();
-                const response = await fetch(basePath + 'flashcards.json');
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const response = await fetch('./flashcards.json');
+                if (!response.ok) throw new Error(`Failed to load flashcards.json: HTTP ${response.status}`);
                 const data = await response.json();
                 flashcards = data.flashcards;
+                console.log('Loaded ' + flashcards.length + ' flashcards');
                 displayCard();
             } catch (error) {
                 console.error('Error loading flashcards:', error);
-                document.getElementById('flashcard').innerHTML = '<p>Error loading flashcards. Make sure flashcards.json is in the same directory.</p>';
+                document.getElementById('flashcard').innerHTML = '<p style="color: red; text-align: center;">Error loading flashcards. Details: ' + error.message + '</p>';
             }
         }
 
@@ -330,9 +320,8 @@
             const card = flashcards[currentIndex];
             const imageElement = document.getElementById('cardImage');
             
-            // Get the correct path for both local and GitHub Pages
-            const basePath = getBasePath();
-            imageElement.src = basePath + 'images/' + card.image;
+            // Use relative paths - works on both local and GitHub Pages
+            imageElement.src = './images/' + card.image;
             imageElement.alt = card.back[0];
 
             document.getElementById('cardTitle').textContent = card.back[0];
