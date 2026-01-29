@@ -1,0 +1,164 @@
+{
+  "flashcards": [
+    {
+      "id": 1,
+      "image": "01_Creation.png",
+      "back": [
+        "Creation",
+        "Creation of the world - Genesis 1"
+      ]
+    },
+    {
+      "id": 2,
+      "image": "02_ManWoman.png",
+      "back": [
+        "Man and Woman",
+        "Creation of Adam and Even - Genesis 2"
+      ]
+    },
+    {
+      "id": 3,
+      "image": "03_Fall.png",
+      "back": [
+        "Fall",
+        "Satan and the fall of humanity into sin, Genesis 3-4"
+      ]
+    },
+    {
+      "id": 4,
+      "image": "04_Flood.png",
+      "back": [
+        "Flood",
+        "Noah and the flood, Genesis 6-9"
+      ]
+    },
+    {
+      "id": 5,
+      "image": "05_Tower.png",
+      "back": [
+        "Tower",
+        "Babel, where God humbled humanity - Genesis 11"
+      ]
+    },
+    {
+      "id": 6,
+      "image": "06_TheCall.png",
+      "back": [
+        "The Call",
+        "God called Abram to begin the redemptive process"
+      ]
+    },
+    {
+      "id": 7,
+      "image": "07_Renamed.png",
+      "back": [
+        "Renamed",
+        "God changed Abram's name to Abraham and his grandson Jacob's name to Israel"
+      ]
+    },
+    {
+      "id": 8,
+      "image": "08_12Tribes.png",
+      "back": [
+        "12 Tribes",
+        "12 sons / tribes of Israel"
+      ]
+    },
+    {
+      "id": 9,
+      "image": "09_Sold.png",
+      "back": [
+        "Sold",
+        "Joseph sold into slavery"
+      ]
+    },
+    {
+      "id": 10,
+      "image": "10_Egypt.png",
+      "back": [
+        "Egypt",
+        "Joseph becomes a leader in Egypt under Pharaoh"
+      ]
+    },
+    {
+      "id": 11,
+      "image": "11_Opression.png",
+      "back": [
+        "Oppression",
+        "Hebrews enslaved in Egypt"
+      ]
+    },
+    {
+      "id": 12,
+      "image": "12_Exodus.png",
+      "back": [
+        "Exodus",
+        "the Law God gave Moses at Mount Sinai"
+      ]
+    },
+    {
+      "id": 13,
+      "image": "13_Wandering.png",
+      "back": [
+        "Wandering",
+        "Wandering in the wilderness for 40 years"
+      ]
+    },
+    {
+      "id": 14,
+      "image": "14_PromisedLand.png",
+      "back": [
+        "Promised Land",
+        "Israelites finally make it to the Promised Land"
+      ]
+    },
+    {
+      "id": 15,
+      "image": "15_Judges.png",
+      "back": [
+        "Judges",
+        ""
+      ]
+    },
+    {
+      "id": 16,
+      "image": "16_UnitedKingdom.png",
+      "back": [
+        "United Kingdom",
+        "David unites tribes into a single nation"
+      ]
+    },
+    {
+      "id": 17,
+      "image": "17_Temple.png",
+      "back": [
+        "Temple",
+        "David then Solomon build the temple"
+      ]
+    },
+    {
+      "id": 18,
+      "image": "18_DividedKingdom.png",
+      "back": [
+        "Divided Kingdom",
+        "TBD"
+      ]
+    },
+    {
+      "id": 19,
+      "image": "19_Exile.png",
+      "back": [
+        "Exile",
+        "TBD"
+      ]
+    },
+    {
+      "id": 20,
+      "image": "20_Return.png",
+      "back": [
+        "Return",
+        "TBD"
+      ]
+    }
+  ]
+}
