@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHBC Old Testament Icons Flashcards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .controls button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .controls button:active {
+            transform: translateY(0);
+        }
+
+        .progress {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.flipped {
+            background: #f0f0f0;
+        }
+
+        .card-front {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .card-image {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .card-hint {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .card-back {
+            display: none;
+        }
+
+        .card.flipped .card-front {
+            display: none;
+        }
+
+        .card.flipped .card-back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-back h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .card-back p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .shuffle-indicator {
+            color: white;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 25px;
+                min-height: 400px;
+            }
+
+            .card-image {
+                max-height: 250px;
+            }
+
+            .card-back h2 {
+                font-size: 1.5em;
+            }
+
+            .card-back p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Old Testament Icons</h1>
+            <p>NHBC Rooted Series Flashcards</p>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" class="nav-button">← Previous</button>
+            <button id="resetBtn">Reset</button>
+            <button id="shuffleBtn">Shuffle</button>
+            <button id="nextBtn" class="nav-button">Next →</button>
+        </div>
+
+        <div class="progress">
+            <span id="progressText">Card 1 of 20</span>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="flashcard">
+                <div class="card-front">
+                    <img class="card-image" id="cardImage" src="" alt="Flashcard image">
+                    <div class="card-hint">Click card to reveal answer</div>
+                </div>
+                <div class="card-back">
+                    <h2 id="cardTitle"></h2>
+                    <p id="cardDescription"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="prevBtn2" class="nav-button">← Previous</button>
+            <button id="nextBtn2" class="nav-button">Next →</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="statCurrent">1</div>
+                <div class="stat-label">Current Card</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="statTotal">20</div>
+                <div class="stat-label">Total Cards</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="statProgress">5%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let flashcards = [];
+        let currentIndex = 0;
+        let isFlipped = false;
+        let isShuffled = false;
+
+        // Load flashcards from JSON
+        async function loadFlashcards() {
+            try {
+                // Get the correct path for both local and GitHub Pages
+                const basePath = window.location.pathname.includes('NHBC_Rooted_OldTestamentIcons') 
+                    ? '/NHBC_Rooted_OldTestamentIcons/' 
+                    : '/';
+                const response = await fetch(basePath + 'flashcards.json');
+                const data = await response.json();
+                flashcards = data.flashcards;
+                displayCard();
+            } catch (error) {
+                console.error('Error loading flashcards:', error);
+                document.getElementById('flashcard').innerHTML = '<p>Error loading flashcards. Make sure flashcards.json is in the same directory.</p>';
+            }
+        }
+
+        function displayCard() {
+            if (flashcards.length === 0) return;
+
+            const card = flashcards[currentIndex];
+            const imageElement = document.getElementById('cardImage');
+            
+            // Get the correct path for both local and GitHub Pages
+            const basePath = window.location.pathname.includes('NHBC_Rooted_OldTestamentIcons') 
+                ? '/NHBC_Rooted_OldTestamentIcons/' 
+                : '/';
+            imageElement.src = basePath + 'images/' + card.image;
+            imageElement.alt = card.back[0];
+
+            document.getElementById('cardTitle').textContent = card.back[0];
+            document.getElementById('cardDescription').textContent = card.back[1] || '';
+
+            updateProgress();
+            resetFlip();
+        }
+
+        function updateProgress() {
+            const current = currentIndex + 1;
+            const total = flashcards.length;
+            document.getElementById('progressText').textContent = `Card ${current} of ${total}`;
+            document.getElementById('statCurrent').textContent = current;
+            document.getElementById('statTotal').textContent = total;
+            document.getElementById('statProgress').textContent = Math.round((current / total) * 100) + '%';
+
+            document.getElementById('prevBtn').disabled = currentIndex === 0;
+            document.getElementById('prevBtn2').disabled = currentIndex === 0;
+            document.getElementById('nextBtn').disabled = currentIndex === total - 1;
+            document.getElementById('nextBtn2').disabled = currentIndex === total - 1;
+        }
+
+        function resetFlip() {
+            isFlipped = false;
+            document.getElementById('flashcard').classList.remove('flipped');
+        }
+
+        function toggleFlip() {
+            isFlipped = !isFlipped;
+            document.getElementById('flashcard').classList.toggle('flipped');
+        }
+
+        function nextCard() {
+            if (currentIndex < flashcards.length - 1) {
+                currentIndex++;
+                displayCard();
+            }
+        }
+
+        function prevCard() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                displayCard();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            isShuffled = false;
+            flashcards = flashcards.sort((a, b) => a.id - b.id);
+            document.getElementById('shuffleBtn').textContent = 'Shuffle';
+            displayCard();
+        }
+
+        function shuffle() {
+            if (!isShuffled) {
+                // Fisher-Yates shuffle
+                for (let i = flashcards.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [flashcards[i], flashcards[j]] = [flashcards[j], flashcards[i]];
+                }
+                isShuffled = true;
+                document.getElementById('shuffleBtn').textContent = 'Shuffle (Active)';
+            } else {
+                flashcards.sort((a, b) => a.id - b.id);
+                isShuffled = false;
+                document.getElementById('shuffleBtn').textContent = 'Shuffle';
+            }
+            currentIndex = 0;
+            displayCard();
+        }
+
+        // Event listeners
+        document.getElementById('flashcard').addEventListener('click', toggleFlip);
+        document.getElementById('prevBtn').addEventListener('click', prevCard);
+        document.getElementById('prevBtn2').addEventListener('click', prevCard);
+        document.getElementById('nextBtn').addEventListener('click', nextCard);
+        document.getElementById('nextBtn2').addEventListener('click', nextCard);
+        document.getElementById('resetBtn').addEventListener('click', reset);
+        document.getElementById('shuffleBtn').addEventListener('click', shuffle);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevCard();
+            if (e.key === 'ArrowRight') nextCard();
+            if (e.key === ' ') {
+                e.preventDefault();
+                toggleFlip();
+            }
+        });
+
+        // Load on page load
+        loadFlashcards();
+    </script>
+</body>
+</html>
