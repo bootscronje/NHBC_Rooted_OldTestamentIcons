@@ -5,7 +5,7 @@
       "image": "01_Creation.png",
       "back": [
         "Creation",
-        "Creation of the world - Genesis 1"
+        "The beginning, Creation of the world - Genesis 1"
       ]
     },
     {
@@ -29,7 +29,8 @@
       "image": "04_Flood.png",
       "back": [
         "Flood",
-        "Noah and the flood, Genesis 6-9"
+        "Noah and the flood, Genesis 6-9",
+        "Atonement: the reconcilation between God and humankind accomplished through Jesus Christ"
       ]
     },
     {
@@ -45,7 +46,8 @@
       "image": "06_TheCall.png",
       "back": [
         "The Call",
-        "God called Abram to begin the redemptive process"
+        "Abram and The Covenant: God called Abram to begin the redemptive process",
+        "God calls Abraham to create Israel to give birth to Jesus to save you"
       ]
     },
     {
@@ -61,7 +63,7 @@
       "image": "08_12Tribes.png",
       "back": [
         "12 Tribes",
-        "12 sons / tribes of Israel"
+        "12 sons / tribes of Israel (Jacob - Rachel - Leah:Joseph & Benjamin)"
       ]
     },
     {
@@ -85,7 +87,8 @@
       "image": "11_Opression.png",
       "back": [
         "Oppression",
-        "Hebrews enslaved in Egypt"
+        "Pharaoh fears growing power of Hebrews and enslaves them",
+        "Hebrew people are God's chosen people"
       ]
     },
     {
@@ -93,7 +96,7 @@
       "image": "12_Exodus.png",
       "back": [
         "Exodus",
-        "the Law God gave Moses at Mount Sinai"
+        "God rescues his people from Egypt through Moses"
       ]
     },
     {
@@ -101,7 +104,7 @@
       "image": "13_Wandering.png",
       "back": [
         "Wandering",
-        "Wandering in the wilderness for 40 years"
+        "Wandering in the wilderness for 40 years from Egypt to The Promised Land/Canaan - Book of Numbers"
       ]
     },
     {
@@ -109,7 +112,7 @@
       "image": "14_PromisedLand.png",
       "back": [
         "Promised Land",
-        "Israelites finally make it to the Promised Land"
+        "Israelites finally enter the Promised Land - Joshua"
       ]
     },
     {
@@ -117,7 +120,7 @@
       "image": "15_Judges.png",
       "back": [
         "Judges",
-        ""
+        "Period of Judges rule over 12 tribes of Israel"
       ]
     },
     {
@@ -125,7 +128,7 @@
       "image": "16_UnitedKingdom.png",
       "back": [
         "United Kingdom",
-        "David unites tribes into a single nation"
+        "King David (shepard boy) unites Itribes into a single nation, Israel"
       ]
     },
     {
@@ -133,7 +136,7 @@
       "image": "17_Temple.png",
       "back": [
         "Temple",
-        "David then Solomon build the temple"
+        "David then son, Solomon, build the temple"
       ]
     },
     {
@@ -141,7 +144,7 @@
       "image": "18_DividedKingdom.png",
       "back": [
         "Divided Kingdom",
-        "TBD"
+        "Because of Solomon's sins, God allows the kingdom to split into Israel (north) and Judah (south)"
       ]
     },
     {
@@ -149,7 +152,7 @@
       "image": "19_Exile.png",
       "back": [
         "Exile",
-        "TBD"
+        "Babylonians conquer Judah and took them into exile for 70 years"
       ]
     },
     {
@@ -157,7 +160,7 @@
       "image": "20_Return.png",
       "back": [
         "Return",
-        "TBD"
+        "Persians let the Judahites return to Jerusalem and rebuild the temple"
       ]
     }
   ]
