@@ -159,6 +159,85 @@
         "Return",
         "Persians let the Judahites return to Jerusalem and rebuild the temple"
       ]
-    }
-  ]
-}
+      },
+    {
+      "id": 21,
+      "image": "21_Born.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 22,
+      "image": "22_Disciples.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born" 
+      ]
+      },
+    {
+      "id": 23,
+      "image": "23_Ministry.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 24,
+      "image": "24_Death.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 25,
+      "image": "25_Church.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 26,
+      "image": "26_Persecution.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+      ]
+      },
+    {
+      "id": 27,
+      "image": "27_Gentiles.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 28,
+      "image": "28_Spread.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 29,
+      "image": "29_Letters.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
+      "id": 30,
+      "image": "30_Revelation.png",
+      "back": [
+        "Born",
+        "God's Son, Jesus, Messiah, King is born"
+        ]
+      },
+    {
