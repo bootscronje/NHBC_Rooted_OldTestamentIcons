@@ -159,85 +159,86 @@
         "Return",
         "Persians let the Judahites return to Jerusalem and rebuild the temple"
       ]
-      },
+    },
     {
       "id": 21,
       "image": "21_Born.png",
       "back": [
         "Born",
         "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+      ]
+    },
     {
       "id": 22,
       "image": "22_Disciples.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born" 
+        "Disciples",
+        "Jesus chooses his 12 disciples"
       ]
-      },
+    },
     {
       "id": 23,
       "image": "23_Ministry.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Ministry",
+        "Jesus' ministry and teachings"
+      ]
+    },
     {
       "id": 24,
       "image": "24_Death.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Death",
+        "Jesus' death and resurrection"
+      ]
+    },
     {
       "id": 25,
       "image": "25_Church.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Church",
+        "The birth of the Church"
+      ]
+    },
     {
       "id": 26,
       "image": "26_Persecution.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
+        "Persecution",
+        "Early church persecution"
       ]
-      },
+    },
     {
       "id": 27,
       "image": "27_Gentiles.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Gentiles",
+        "Gospel extends to the Gentiles"
+      ]
+    },
     {
       "id": 28,
       "image": "28_Spread.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Spread",
+        "Gospel spreads throughout the world"
+      ]
+    },
     {
       "id": 29,
       "image": "29_Letters.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
+        "Letters",
+        "Paul's letters to the churches"
+      ]
+    },
     {
       "id": 30,
       "image": "30_Revelation.png",
       "back": [
-        "Born",
-        "God's Son, Jesus, Messiah, King is born"
-        ]
-      },
-    {
+        "Revelation",
+        "God's final revelation and return of Christ"
+      ]
+    }
+  ]
+}
